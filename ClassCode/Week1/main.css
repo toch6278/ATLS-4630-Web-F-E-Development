@@ -22,3 +22,17 @@ article
 
     margin: 30px; 
 }
+.header
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#page-title
+{
+    font-family: 'Courier New', Courier, monospace;
+    /* want to use em more than px because em is bigger than px */
+    font-size: 2em;
+}
+a 
+{
+    display: block;
+}
