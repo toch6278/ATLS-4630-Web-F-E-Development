@@ -1,0 +1,24 @@
+body
+{
+    background: beige;
+}
+article
+{
+    display: block;
+    /*doens't always know how bit the width of the text will be*/
+    /* display: inline; */
+    background-color:antiquewhite;
+    /* amount of space outside the object */
+    /* margins are outside the object and padding is inside the object */
+    
+    /* same padding all around */
+    padding: 10px; 
+
+    /* first number is top and bottom, second number is left and right */
+    /* padding: 50px 10px;  */
+
+    /* top, right left, bottom - in a circle clockwise */
+    /* padding: 50px 10px 100px 15px; */
+
+    margin: 30px; 
+}
