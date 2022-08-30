@@ -1,0 +1,41 @@
+#box
+{
+    background-color: bisque;
+    border-color: azure;
+    border-style: solid;
+    border-width: 10px;
+    /* content inside the box is padded; currently telling me 445.143 x 78.286 big */
+    padding: 10px;
+    /* gap around the page  */
+    /* margin: 10px; */
+    margin: auto; 
+    /* content within the box is actually 500px, not the box  */
+    width: 500px; 
+    box-sizing: border-box; 
+}
+
+/* DON'T DO THIS!! */
+/* ********* */
+#first-button
+{
+    background-color: black; 
+    color: white; 
+}
+#first-button:hover
+{
+    background-color: white; 
+    color: black;
+}
+/* *********** */
+
+/* think about using classes */
+.styleButton
+{
+    background-color: black; 
+    color: white; 
+}
+.styleButton:hover
+{
+    background-color: white; 
+    color: black;
+}
