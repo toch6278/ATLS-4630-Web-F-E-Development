@@ -1,17 +1,25 @@
+body 
+{
+    padding: 0; 
+    margin: 0; 
+}
 #box
 {
     background-color: bisque;
     border-color: azure;
     border-style: solid;
-    border-width: 10px;
+    border-width: 0.5rem;
     /* content inside the box is padded; currently telling me 445.143 x 78.286 big */
-    padding: 10px;
+    padding: 2rem;
     /* gap around the page  */
     /* margin: 10px; */
     margin: auto; 
     /* content within the box is actually 500px, not the box  */
-    width: 500px; 
+    width: 20rem; 
     box-sizing: border-box; 
+    /* design container of a page because you don't want to take up the whole width of the page  */
+    min-width: 200px; 
+    max-width: 500px; 
 }
 
 /* DON'T DO THIS!! */
@@ -38,4 +46,75 @@
 {
     background-color: white; 
     color: black;
+}
+
+/* 9/1/22 classwork */
+.flex-container
+{
+    display: flex; 
+    /* flex-direction: row;  */
+    /* height: 50rem;  */
+    /* flex-wrap: wrap; */
+
+    
+    flex-flow: row wrap;  
+    /* flex-flow: row nowrap; */
+
+    height: 20rem;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center; 
+}
+.flex-item
+{
+    color: white;
+    /* flex-grow: 1;  */
+    flex-basis: 10rem;
+    flex-shrink: 1;
+    /* flex-grow: 1; */
+    padding: 0.5rem; 
+    margin: 0.5rem; 
+}
+#first-child
+{
+    background-color: blue;
+    flex-grow: 0; 
+}
+#second-child
+{
+    background-color: purple;
+    flex-grow: 0; 
+}
+#third-child
+{
+    background-color: red;
+    flex-grow:0; 
+}
+#fourth-child
+{
+    background-color: green;
+    flex-grow: 0;
+    /* flex: 3 0 15px;  */
+}
+
+.grid-container
+{
+    display: grid;
+    /* there will be 2 rows and each will be 200px tall  */
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 100px 100px 200px;
+}
+#first-grid-item
+{
+    background-color: aliceblue;
+    /* span from row 1 to row 2 */
+    grid-row: 1; 
+    grid-column: 2; 
+}
+#second-grid-item
+{
+    background-color: blanchedalmond;
+    /* span from row 1 to row 2 */
+    grid-row: 2 / 4; 
+    grid-column: 1 / 4; 
 }
