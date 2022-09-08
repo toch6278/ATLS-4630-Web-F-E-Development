@@ -1,0 +1,23 @@
+.top
+{
+    margin: 2rem;
+    padding: 2rem;  
+    align-items: center;
+    font-size: 20px; 
+} 
+
+body
+{
+    background-color: #F7F7ED;
+}
+
+.info
+{
+    margin: 2rem; 
+    padding: 5rem;
+    background-color: #D9D9D9;
+}
+button
+{
+    border-radius: 2rem;
+}
