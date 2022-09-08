@@ -21,3 +21,8 @@ button
 {
     border-radius: 2rem;
 }
+button:hover
+{
+    background-color: black;
+    color: white; 
+}
