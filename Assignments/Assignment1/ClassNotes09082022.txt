@@ -1,3 +1,7 @@
+how to test responsive
+stop it from moving back and forth
+font
+
 make responsive to all sizes of devices 
 margin: 0
 
@@ -5,6 +9,7 @@ assignments js:
 if button is clicked, change mode to night mode and back to light mode
 div.addEventListeneer('mouseenter', ()=>{
 div.style.backgroundColor = "#ff0000"; 
+}
 
 manipulate css property in dom
 body.style.backgroundColor = "00000";
