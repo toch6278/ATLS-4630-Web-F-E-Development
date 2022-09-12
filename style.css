@@ -27,7 +27,7 @@ img
   display: block; 
   margin-right: auto;
   margin-left: auto;
-  width: 100%;
+  width: 70%;
   align-items: center;
 }
 article
@@ -41,6 +41,10 @@ article
     padding: 3rem;
     min-width: 200px;
     /* max-width: 500px; */
+}
+p
+{
+    color: white; 
 }
 .contact
 {
