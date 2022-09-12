@@ -6,11 +6,16 @@ const box = document.getElementsByClassName("info");
 const manip1 = document.getElementsByClassName('manipulators'); 
 var toggle = false; 
 
+const cursorTag = document.querySelector("div.cursors");
+const ball = cursorTag.querySelector("div");
+
 var mouse = 
 {
     x: undefined, 
     y: undefined
 }
+
+// var randomColor = Math.floor(Math.random()*)
 
 let circle = document.getElementById('circle');
 
@@ -39,18 +44,7 @@ function buttonClicked()
         box[0].style.color = 'white';  
         manip1[0].style.color = "#F7F7ED"; 
         toggle = true; 
-    // }
-    // if(toggle == true)
-    // {
-        // console.log('clicked again'); 
-        // document.body.style.backgroundColor = '#F7F7ED'; 
-        // text[0].style.color = "black";
-        // console.log('font color changed back');
-        // box[0].style.backgroundColor = '#D9D9D9';
-        // box[0].style.color = 'black';  
-        // manip1[0].style.color = "black"; 
-        // toggle = false;
-    // }
+    ///}
 
 }
 
@@ -59,8 +53,16 @@ function mouseMoved()
     mouse.x = event.x; 
     mouse.y = event.y; 
     console.log(mouse.x,',', mouse.y);  
-    document.write(mouse.x,',', mouse.y);
+    // document.write(mouse.x,',', mouse.y);
+    //SuperHi - How to make a custom mouse cursor with text hover and trailer effect with HTML, CSS and Javascript
+    ball.style.left = event.pageX +"px"; 
+    ball.style.top = event.pageY + "px";
 }
+
+// document.addEventListener("mousemove", function(event){
+//     ball.style.left = event.pageX +"px"; 
+//     ball.style.top = event.pageY + "px";
+// })
 
 function adjustVolume()
 {

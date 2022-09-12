@@ -1,9 +1,30 @@
+@media (min-width: 100em)
+{
+    #music
+    {
+        position: absolute; 
+        top: 80%; 
+        left: 20%; 
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 500em)
+{
+    #music
+    {
+        position: absolute; 
+        top: 70%; 
+        left: 80%; 
+        transform: translate(-50%, -50%);
+    }
+}
 .top
 {
     margin: 2rem;
     padding: 2rem;  
     align-items: center;
     font-size: 20px; 
+    font-family: 'Poppins';
 } 
 
 body
@@ -35,6 +56,7 @@ body
 button
 {
     border-radius: 2rem;
+    font-family: 'Poppins';
 }
 button:hover
 {
@@ -43,7 +65,8 @@ button:hover
 }
 #second 
 {
-    padding: 2rem 0rem; 
+    padding: 2rem 0rem;
+    font-family: 'Poppins'; 
 }
 #music
 {
@@ -51,4 +74,19 @@ button:hover
     top: 70%; 
     left: 80%; 
     transform: translate(-50%, -50%);
+}
+
+div.cursors div
+{
+    position: absolute; 
+    top: 300px; 
+    left: 300px; 
+    width: 32px; 
+    height: 32px; 
+    background-color:#C8A4ED;
+    opacity: 50%;
+    border-radius: 50%; 
+    z-index: 10000; 
+    pointer-events: none;
+    transform: translate(-50%, -50%); 
 }
