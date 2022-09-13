@@ -1,0 +1,16 @@
+fieldset
+{
+    border-color: blueviolet;
+    padding: 2rem;
+    margin: 1rem;
+}
+div
+{
+    margin: 2rem;
+}
+
+input[type="email"]
+{
+    /* input field will take up 80% of the page  */
+    width: 80%; 
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Create a Form </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="">
+            <div>
+                <label for="first-text-input"> Enter in some text!</label>
+                <!-- self closing tags are required for react -->
+                <!-- ids are helpful for styling but also linking form elements -->
+                <input type="text" id = "first-text-input"/>
+            </div>
+            <label for="email-input"> Email </label>
+            <!-- helpful for mobil devices -->
+            <!-- can style css by putting a class  -->
+            <input type="email" id = "email-input"/>
+
+            <div>
+                <label for="color-input"> Choose a color </label>
+                <input type="color" id = "color-input"/>
+            </div>
+
+            <!-- should use fieldsets for more accessibility -->
+            <fieldset>
+                <legend> Checkbox Group </legend>
+                <input type="checkbox" id = "check-1" name = "checkbox-group">
+                <label for="check-1"> Option 1 </label>
+                <input type="checkbox" id = "check-2" name = "checkbox-group">
+                <label for="check-2"> Option 2 </label>
+                <input type="checkbox" id = "check-3" name = "checkbox-group">
+                <label for="check-3"> Option 3 </label>
+                <input type="checkbox" id = "check-4" name = "checkbox-group">
+                <label for="check-4"> Option 4 </label>
+            </fieldset>
+
+            <fieldset>
+                <legend> Favorite Ice Cream Flavor </legend>
+                <input type="radio" id = "vanilla" name="icecream">
+                <label for="vanilla"> Vanilla </label>
+                <input type="radio" id = "chocolate" name="icecream">
+                <label for="chocolate"> Chocolate </label>
+                <input type="radio" id = "strawberry" name="icecream">
+                <label for="strawberry"> Strawberry </label>
+            </fieldset>
+        </form>
+    </body>
+</html>
