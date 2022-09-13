@@ -9,6 +9,7 @@ var toggle = false;
 const cursorTag = document.querySelector("div.cursors");
 const ball = cursorTag.querySelector("div");
 
+//initialize variables to identify where the cursor is
 var mouse = 
 {
     x: undefined, 
@@ -17,6 +18,7 @@ var mouse =
 
 // var randomColor = Math.floor(Math.random()*)
 
+//create circle for mouse
 let circle = document.getElementById('circle');
 
 const obj = document.createElement('audio'); 
@@ -28,8 +30,12 @@ let audio = document.getElementById('#music');
 var min = 0; 
 var max = 100; 
 
+//event listener for button
 mode.addEventListener('click', buttonClicked);
+//event listener for cursor
 window.addEventListener('mousemove', mouseMoved); 
+//event listener for external link
+document.getElementById("site").addEventListener('click', linkClicked);
 
 function buttonClicked()
 {
@@ -59,12 +65,8 @@ function mouseMoved()
     ball.style.top = event.pageY + "px";
 }
 
-// document.addEventListener("mousemove", function(event){
-//     ball.style.left = event.pageX +"px"; 
-//     ball.style.top = event.pageY + "px";
-// })
-
-function adjustVolume()
+function linkClicked()
 {
-    // if()
+    console.log("linked");
+    alert("Going to your blog!");
 }
