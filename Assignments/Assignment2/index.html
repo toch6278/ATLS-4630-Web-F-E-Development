@@ -3,8 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title> Assignment 2 - Forms </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <article class = "flex-container" id = "big-flex">
+        <div class = "flex-box" id = "item1">
+            <h1> Nostalgia Form </h1>
+            <img src="polaroid.jpg" alt="Polaroid Photo">
+            <p> Through this form, participants will recall nostalgic memories from their childhood </p>
+        </div>
+        <div class = "flex-box" id = "item2">
+            <fieldset id = "gym">
+                <legend> Favorite Gym Game </legend>
+                <div class = "flex-box" id = "game1">
+                    <img src="scooters.jpg" alt=" Scooters">
+                    <label for="scooters"> Scooters </label>
+                    <input type="radio" id = "scooters">
+
+                </div>
+                <div class = "flex-box" id = "game2">
+                    <img src="parachute.jpg" alt="Parachute">
+                    <label for="parachute"> Parachute </label>
+                    <input type="radio" id = "parachute">
+                </div>
+                <div class = "flex-box" id = "game3">
+                    <img src = "dodgeball.jpg" alt = "Dodgeball">
+                    <label for="dodgeball"> Dodgeball </label>
+                    <input type="radio" id = "dodgeball">
+                </div>
+            </fieldset>
+            <fieldset id = "toy">
+                <legend> Favorite Childhood Toy </legend>
+                <input type="toy"/>
+            </fieldset>
+            <fieldset id = "desserts">
+                <div>
+                    <legend> What desserts would you get from this selection? </legend>
+                    
+                    <input type="checkbox" id = "check-1">
+                    <label for="check-1"> Fudge Squares </label>
+                
+                    <input type="checkbox" id = "check-2">
+                    <label for="check-2"> Red Velvet Cake </label>
+                    
+                    <input type="checkbox" id = "check-3">
+                    <label for="check-3"> Snickerdoodle Cookies </label>
+                    
+                    <input type="checkbox" id = "check-4">
+                    <label for="check-4"> Pumpkin Pie </label>
+                    
+                    <input type="checkbox" id = "check-5">
+                    <label for="check-5"> Birthday Cake Ice Cream </label>
+                </div>
+                <div>
+                    <label for="toppings"> What toppings? </label>
+                    <input type="toppings" id = "toppings"/>
+                </div>
+                
+            </fieldset>
+        </div>
+    </article>
+    <article class = "grab-info">
+        <div>
+            <p> Thank you for filling out this form! </p>
+            <div>
+                <label for="name"> Full Name </label>
+                <input type="name" id = "name">
+            </div>
+            <div>
+                <label for="email"> Email Address </label>
+                <input type = "email" id = "email" name = "email" /> 
+            </div>
+        </div>
+    </article>
+    <button> SUBMIT </button>
 </body>
 </html>

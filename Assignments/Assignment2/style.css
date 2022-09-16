@@ -1,0 +1,86 @@
+h1
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+}
+body
+{
+    padding: 2rem;
+    background-color: #e8d7cf;
+}
+.flex-container
+{
+    display: flex;
+    /* flex-flow: row wrap; */
+    align-items: right;
+    /* border-radius: 10%; */
+    border-color: black;
+    margin: 2rem; 
+    width: 50%; 
+    height: 80%; 
+    flex-direction: column;
+}
+.flex-box
+{
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.flex-box img
+{
+    width: 50%; 
+    height: 50%; 
+}
+img
+{
+    width: 20%; 
+    height: 20%; 
+    
+}
+#item1
+{
+    flex-grow: 2;
+    background-color: #e8d7cf;
+}
+#item2
+{
+    flex-grow: 2;
+    background-color: #e8d7cf;
+}
+#gym 
+{
+    /* border-radius: 10%; */
+    border-color: aliceblue;
+    display: flex; 
+    align-items: center;
+}
+#game1
+{
+    display: inline-flex;
+    flex-direction: row;
+}
+#game2
+{
+    display: inline-flex;
+    flex-direction: row;
+}
+#game3
+{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.grab-info
+{
+    background-color: #e8d7cf;
+    border: black;
+}
+
+#toy
+{
+    /* border-radius: 10%; */
+    border-color: aliceblue;
+}
+#desserts 
+{
+    border-color: aliceblue;
+}
