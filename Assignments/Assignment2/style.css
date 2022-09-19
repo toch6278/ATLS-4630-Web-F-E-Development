@@ -8,6 +8,10 @@ body
     padding: 2rem;
     background-color: #e8d7cf;
 }
+p
+{
+    margin: 2rem 0rem; 
+}
 legend
 {
     font-family:'Courier New', Courier, monospace;
@@ -28,7 +32,15 @@ legend
 }
 .flex-box
 {
-    flex-wrap: wrap;
+    display: flex; 
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    border-color: black;
+}
+.flex-box2
+{
+    display: flex; 
+    /* flex-wrap: wrap; */
     flex-direction: row;
     border-color: black;
 }
@@ -40,8 +52,7 @@ legend
 img
 {
     width: 20%; 
-    height: 20%; 
-    
+    height: 20%;  
 }
 #item1
 {
@@ -54,11 +65,18 @@ img
     flex-grow: 2;
     background-color: #e8d7cf;
 }
+#item2 img
+{
+    width: 100px;
+    height: 100px; 
+    object-fit: cover;
+    margin: 2px; 
+}
 #gym 
 {
     /* border-radius: 10%; */
     border-color: aliceblue;
-    display: flex; 
+    /* display: flex;  */
     align-items: center;
 }
 #game1
@@ -82,13 +100,24 @@ img
     background-color: #e8d7cf;
     border: black;
 }
+.closing
+{
+    margin: 2rem;
+    font-weight: bold;
+}
 
-#toy
+#stats #toy #desserts #gym
 {
     /* border-radius: 10%; */
     border-color: aliceblue;
 }
-#desserts 
+
+#extra
 {
-    border-color: aliceblue;
+    margin: 0rem 1.5rem;
+}
+
+#submit
+{
+    margin: 2rem 0rem;
 }

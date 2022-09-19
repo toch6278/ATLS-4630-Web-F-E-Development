@@ -11,58 +11,73 @@
             <div class = "flex-box" id = "item1">
                 <h1> Nostalgia Form </h1>
                 <img src="polaroid.jpg" alt="Polaroid Photo">
-                <p> Through this form, participants will recall nostalgic memories from their childhood </p>
             </div>
-            <div class = "flex-box" id = "item2">
-                <fieldset id = "gym">
-                    <legend> Favorite Gym Game </legend>
-                    <div class = "flex-box">
-                        <img src="scooters.jpg" alt=" Scooters">
-                        <img src="parachute.jpg" alt="Parachute">
-                        <img src = "dodgeball.jpg" alt = "Dodgeball">
-                    </div>
-                                       
-                    <input type="radio" id = "scooters">
-                    <label for="scooters"> Scooters </label>
-                    
-                    <input type="radio" id = "parachute">
-                    <label for="parachute"> Parachute </label>
-                    
-                    <input type="radio" id = "dodgeball">
-                    <label for="dodgeball"> Dodgeball </label>
+            <div>
+                <p> Through this form, participants will recall nostalgic memories from their childhood </p>
+                <fieldset id = "stats">
+                    <legend> How old are you? </legend>
+                    <input type="range" id = "age" name = "age" min = "1" max = "100" step = "2" value = "40"/>
+                    <output class = "age-output" for = "age"></output>
                 </fieldset>
                 <fieldset id = "toy">
                     <legend> Favorite Childhood Toy </legend>
                     <input type="toy"/>
                 </fieldset>
+            </div>    
+            <div class = "flex-box" id = "item2">
+                <fieldset id = "gym">
+                    <legend> Favorite Gym Game </legend>
+                    <div class = "flex-box">
+                        <div>
+                            <img src="scooters.jpg" alt=" Scooters">
+                            <input type="radio" id = "scooters" name = "game">
+                            <label for="scooters"> Scooters </label>
+                        </div>
+                        <div>
+                            <img src="parachute.jpg" alt="Parachute">
+                            <input type="radio" id = "parachute" name = "game">
+                            <label for="parachute"> Parachute </label>
+                        </div>   
+                        <div>
+                            <img src = "dodgeball.jpg" alt = "Dodgeball">
+                        <input type="radio" id = "dodgeball" name = "game">
+                        <label for="dodgeball"> Dodgeball </label>
+                        </div>  
+                    </div>
+                </fieldset>
                 <fieldset id = "desserts">
                     <legend> What desserts would you get from this selection? </legend>
                     <div>
-                        <input type="checkbox" id = "check-1">
-                        <label for="check-1"> Fudge Squares </label>
-                    
-                        <input type="checkbox" id = "check-2">
-                        <label for="check-2"> Red Velvet Cake </label>
-                        
-                        <input type="checkbox" id = "check-3">
-                        <label for="check-3"> Snickerdoodle Cookies </label>
-                        
-                        <input type="checkbox" id = "check-4">
-                        <label for="check-4"> Pumpkin Pie </label>
-                        
-                        <input type="checkbox" id = "check-5">
-                        <label for="check-5"> Birthday Cake Ice Cream </label>
-                    </div>
-                    <div>
-                        <label for="toppings"> What toppings? </label>
-                        <input type="toppings" id = "toppings"/>
+                        <div>
+                            <input type="checkbox" id = "check-1">
+                            <label for="check-1"> Fudge Squares </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id = "check-2">
+                            <label for="check-2"> Red Velvet Cake </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id = "check-3">
+                            <label for="check-3"> Snickerdoodle Cookies </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id = "check-4">
+                            <label for="check-4"> Pumpkin Pie </label>
+                        </div>  
+                            <input type="checkbox" id = "check-5">
+                            <label for="check-5"> Birthday Cake Ice Cream </label>
+                            <div id = "extra">
+                                <label for="toppings"> What toppings? </label>
+                                <input type="toppings" id = "toppings"/>
+                            </div>
+                        </div>
                     </div>
                     
                 </fieldset>
             </div>
         </div>
         <form class = "grab-info">
-            <div>
+            <div class = "closing">
                 <p> Thank you for filling out this form! </p>
                 <div>
                     <label for="name"> Full Name </label>
@@ -74,7 +89,8 @@
                 </div>
             </div>
         </form>
-        <button> SUBMIT </button>
+        <button id = "submit"> SUBMIT </button>
     </form>
+    <script> type src = "main.js" </script>
 </body>
 </html>
