@@ -11,6 +11,7 @@ body
 p
 {
     margin: 2rem 0rem; 
+    font-family: "Poppins";
 }
 legend
 {
@@ -83,16 +84,19 @@ img
 {
     display: inline-flex;
     flex-direction: row;
+    font-family: "Poppins";
 }
 #game2
 {
     display: inline-flex;
     flex-direction: row;
+    font-family: "Poppins";
 }
 #game3
 {
     display: inline-flex;
     flex-direction: row;
+    font-family: "Poppins";
 }
 
 .grab-info
@@ -120,4 +124,20 @@ img
 #submit
 {
     margin: 2rem 0rem;
+}
+
+#modal
+{
+    padding: 2rem; 
+    /* margin: 2rem; */
+    align-items: center;
+    font-family: "Poppins";
+}
+
+#particles canvas
+{
+    position: fixed !important; 
+    width: 75%; 
+    height: 75%;
+    pointer-events: non !important
 }

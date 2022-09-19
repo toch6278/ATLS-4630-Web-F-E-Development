@@ -16,12 +16,12 @@
                 <p> Through this form, participants will recall nostalgic memories from their childhood </p>
                 <fieldset id = "stats">
                     <legend> How old are you? </legend>
-                    <input type="range" id = "age" name = "age" min = "1" max = "100" step = "2" value = "40"/>
+                    <input type="range" id = "age" name = "age" min = "1" max = "100" step = "1" value = "40"/>
                     <output class = "age-output" for = "age"></output>
                 </fieldset>
                 <fieldset id = "toy">
                     <legend> Favorite Childhood Toy </legend>
-                    <input type="toy"/>
+                    <input type= "textbox" id = "toy"/>
                 </fieldset>
             </div>    
             <div class = "flex-box" id = "item2">
@@ -90,7 +90,13 @@
             </div>
         </form>
         <button id = "submit"> SUBMIT </button>
+        <dialog id = "modal">
+            <div id = "particles"></div>
+            <h1> Form Submitted </h1>
+            <p> Thank you for your input! <br> You're responses will be sent to your email </p>
+        </dialog>
     </form>
-    <script> type src = "main.js" </script>
+    
+    <script src="main.js"> </script>
 </body>
 </html>
