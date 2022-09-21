@@ -13,30 +13,47 @@ function quiz()
 	let quiz_answers = [1, 82, 0];
 	
 	//get total number of questions
-	let totalQuestion = quiz_questions.count;
+	let totalQuestion = 0;
+	for (count = 0; count < quiz_questions.length; count++)
+	{
+		totalQuestion++;
+	}
+	// console.log(totalQuestion); 
 	
 	//generate random number for question
 	num = Math.floor(Math.random() * 3);
-		console.log(count); 
+		// console.log("count:", count); 
+		// console.log(`num variable: ${num}`); 
 	for(count = 0; count < totalQuestion; count++)
 	{
+		// console.log("going through question ", num);
 		question = quiz_questions[num];
 		answer = prompt(question);
-		if (answer === quiz_answers[num]) 
+		// console.log(answer); 
+		//if the answer given matches the quiz answer at num index
+		// console.log("changed num?: ", num);
+		if (answer == quiz_answers[num]) 
 		{
+			//increase the score
 			score++;
+			// console.log("answer:", quiz_answers[num]);
 			alert("Correct!");
 		}
 		else 
 		{
+			//else gain no points
+			// console.log("answer:", quiz_answers[num]);
 			alert("Wrong");
 		}
 		num++;
-		if (num == totalQuestion) 
+		// console.log("new num:", num);
+		//if at the end of questions array, set back to zero
+		if (num === totalQuestion) 
 		{
 			num = 0;
 		}
+		
 	}
 
-  document.write('<p>You got ${score} out of ${totalQuestion} questions correct.</p>');
+  document.write(`<p>You got ${score} out of ${totalQuestion} questions correct.</p>`);
 }
