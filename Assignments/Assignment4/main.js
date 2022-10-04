@@ -91,11 +91,40 @@ console.log("hello");
 //         console.log(error); 
 //     });
 
+// fetch('https://api.quotable.io/random')
+//   .then((response) => response.json())
+//   .then((data) => {
+//   // do stuff with your json data here
+
+//     //print data to console
+//     console.log(data);
+
+//     // get quote text from the api
+//     console.log(data.content);
+//     document.getElementById("#content").innerHtml = json.dat.content;
+//   })
+//     .catch(() => {
+//         // on error, print msg to console
+//         console.log("ajax error");
+//       });
+
 fetch('https://api.quotable.io/random')
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .then((json) => 
-    {
-        document.getElementById("content").innerHtml = json.data
-    })
-    .catch((error) => console.log(error))
+  .then((response) => response.json())
+  .then((data) => {
+  // do stuff with your json data here
+
+    //print data to console
+    console.log(data);
+
+    // get quote text from the api
+    console.log(data.content);
+
+    // insert quote text using a template literal a paragraph element within content div
+    document.getElementById("content").innerHTML = `<p>${data.content}</p>` + `<p><strong> - ${data.author}</strong></p>`;
+    // document.getElementById("content").innerHTML = `<p>${data.author}</p>`;
+    
+  })
+  .catch(() => {
+        // on error, print msg to console
+        console.log("ajax error");
+      });
