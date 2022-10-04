@@ -108,6 +108,12 @@ console.log("hello");
 //         console.log("ajax error");
 //       });
 
+refreshButton = document.querySelector("#reload");
+refreshButton.addEventListener('click', () => {
+    window.location.reload(true); 
+});
+ 
+
 fetch('https://api.quotable.io/random')
   .then((response) => response.json())
   .then((data) => {
