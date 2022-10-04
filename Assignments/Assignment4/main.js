@@ -49,18 +49,18 @@ console.log("hello");
 //     }
 // }
 
-// const httpCatUrlBuilder = new UrlBuilder('https://cataas.com/');
-// // httpCatUrlBuilder.addParam('count', '4'); 
-// const httpCatUrl = httpCatUrlBuilder.build();
-// // console.log(httpCatUrl); 
+// const randomWordUrlBuilder = new UrlBuilder('https://api.quotable.io/random');
+// // randomWordUrlBuilder.addParam('count', '4'); 
+// const randomWordUrl = randomWordUrlBuilder.build();
+// // console.log(randomWordUrl); 
 
 // //request takes in a couple parameters: url
-// const request = new Request('https://cataas.com/');
+// const request = new Request('https://api.quotable.io/random');
 // //fetch returns a promise for the request in the future 
 // // fetch(request)
-// // fetch('https://httpCat.herokuapp.com/')
-// // fetch('https://httpCat.herokuapp.com/?count=3', {
-// fetch(httpCatUrl, {
+// // fetch('https://randomWord.herokuapp.com/')
+// // fetch('https://randomWord.herokuapp.com/?count=3', {
+// fetch(randomWordUrl, {
 //     method: 'GET',
 //     headers: {'Content-Type': 'application/json'}
 // })
@@ -91,22 +91,11 @@ console.log("hello");
 //         console.log(error); 
 //     });
 
-fetch('https://cataas.com/',
-{
-    method: 'POST', 
-    headers: 
+fetch('https://api.quotable.io/random')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .then((json) => 
     {
-        'Content-Type': 'application/json'
-    }
-}) 
-    .then(res => {
-        if(res.ok) {
-            console.log('SUCCESS')
-            console.log(res)
-        } 
-        else
-        {
-            console.log('UNSUCCESSFUL')
-        }
+        document.getElementById("content").innerHtml = json.data
     })
-    // .then(data => console.log(data))
+    .catch((error) => console.log(error))
