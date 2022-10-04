@@ -8,7 +8,8 @@
 <body>
     <form action="">
         <div>
-            <h1> Matchy Mochi </h1>
+            <!-- <h1> Matchy Mochi </h1> -->
+            <img class = "game" src = "MatchyMochi.png" alt = "Game Name">
             <!-- match the mochi -->
             <p> You as the baker loves the dessert mochi and wants to make <br>
             differnt types of mochi </p>
@@ -27,8 +28,11 @@
                 <input type="radio" id = "level3" name = "task">
                 <label for="level3"> Boxy Mochi </label>
             </div>
-            <button id = "play-button"> PLAY </button>
+            <button onClick = "onClickFn()" id = "play-button"> PLAY </button>
         </fieldset>
+        <div>
+            <img class = "avatar" src = "happyMochi.png" alt = "Mochi Avatar">
+        </div>
         
     </form>
 </body>

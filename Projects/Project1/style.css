@@ -8,6 +8,11 @@ button
     margin: 2rem; 
     padding: 10px;
 }
+.avatar
+{
+    margin: 2rem; 
+    align-items: center;
+}
 .card 
 {
     margin: 100px auto 0; 

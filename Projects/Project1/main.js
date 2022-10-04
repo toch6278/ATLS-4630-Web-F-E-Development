@@ -17,6 +17,20 @@ for (i = 0; i < document.getElementsByClassName("options").length; i++)
 function optionClicked(e)
 {
     console.log("yo");
+    if(document.getElementById('level1').checked)
+    {
+      document.getElementedById('').src = '';
+    }
+}
+
+// const playButton = document.querySelector('#play-button'); 
+// playButton.addEventListener('click', () => {
+//   location.href = "level1.html";
+// });
+
+function onClickFn()
+{
+  document.location.href = "level1.html";
 }
 
 //https://www.kirilv.com/canvas-confetti/
