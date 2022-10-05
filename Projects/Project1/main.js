@@ -8,7 +8,7 @@ console.log('hello');
 let levels = ["Levels/level1.html","level2.html", "level3.html"];
 for(i = 0; i < document.getElementsByClassName("options").length; i++)
 {
-  document.getElementsByClassName("options")[i].addEventListener("click", optionClicked, false);
+  console.log(document.getElementsByClassName("options")[i].addEventListener("click", optionClicked, false));
   document.getElementsByClassName("options")[i].id = i; 
 }
 
@@ -16,13 +16,20 @@ for(i = 0; i < document.getElementsByClassName("options").length; i++)
 function optionClicked(e)
 {
     console.log("yo");
+    console.log(`${fieldset}`);
     dow = e.target.id; 
     window.open(levels[dow], '_self'); 
 }
 
 const playButton = document.querySelector('#play-button'); 
 console.log(playButton);
-playButton.addEventListener('click', () => {
+playButton.onsubmit = () =>
+{
+
+}; 
+playButton.addEventListener('click', (event) => {
+  console.log('button clicked');
+  event.preventDefault();
   document.location.href = "Levels/level1.html";
 });
 
