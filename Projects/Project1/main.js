@@ -5,36 +5,35 @@ console.log('hello');
 //     location.href = "level1.html";
 // };
 
-let levels = ["level1.html","https://youtube.com","https://github.com/toch6278/ATLS-2200-Web-Files"];
-for (i = 0; i < document.getElementsByClassName("options").length; i++)
+let levels = ["Levels/level1.html","level2.html", "level3.html"];
+for(i = 0; i < document.getElementsByClassName("options").length; i++)
 {
-    console.log("in"); 
-    document.getElementsByClassName("options")[i].addEventListener("click", optionClicked, false); 
-    console.log(i + levels[i]);
+  document.getElementsByClassName("options")[i].addEventListener("click", optionClicked, false);
+  document.getElementsByClassName("options")[i].id = i; 
 }
 
 //detects the option that is clicked 
 function optionClicked(e)
 {
     console.log("yo");
-    if(document.getElementById('level1').checked)
-    {
-      document.getElementedById('').src = '';
-    }
+    dow = e.target.id; 
+    window.open(levels[dow], '_self'); 
 }
 
-// const playButton = document.querySelector('#play-button'); 
-// playButton.addEventListener('click', () => {
-//   location.href = "level1.html";
-// });
+const playButton = document.querySelector('#play-button'); 
+console.log(playButton);
+playButton.addEventListener('click', () => {
+  document.location.href = "Levels/level1.html";
+});
 
-function onClickFn()
-{
-  document.location.href = "level1.html";
-}
+// function onClickFn()
+// {
+//   document.location.href = "level1.html";
+// }
 
 //https://www.kirilv.com/canvas-confetti/
 //confetti level complete 
+/*
 var count = 200; 
 var defaults = 
 {
@@ -82,3 +81,4 @@ fire(0.25, {
   {
     card.classList.toggle('is-flipped');
   })
+*/
