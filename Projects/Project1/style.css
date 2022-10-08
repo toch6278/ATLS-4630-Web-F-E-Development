@@ -72,6 +72,7 @@ button
     position: absolute; 
     background: #FCFBF4; 
     border-radius: 7px; 
+    backface-visibility: hidden;
     transition: transform 0.25s linear; 
     box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
 }
@@ -98,4 +99,5 @@ button
 .card:hover .back-view
 {
     transform: rotateY(0); 
+    /* transform: rotateY(180deg);  */
 }
