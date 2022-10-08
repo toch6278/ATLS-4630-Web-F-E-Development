@@ -1,3 +1,4 @@
+/* Reference: CodingNepal - Build a Memory Card Game in HTML CSS & JavaScript */
 body
 {
     background-color: #FBEFE1;
@@ -69,6 +70,9 @@ button
 {
     width: 100%; 
     height: 100%; 
+    /* changes the console to show the tag rather than the image  */
+    user-select: none; 
+    pointer-events: none;
     position: absolute; 
     background: #FCFBF4; 
     border-radius: 7px; 
@@ -92,11 +96,11 @@ button
     max-width: 45px; 
 }
 
-.card:hover .front-view
+.card.flip .front-view
 {
     transform: rotateY(180deg); 
 }
-.card:hover .back-view
+.card.flip .back-view
 {
     transform: rotateY(0); 
     /* transform: rotateY(180deg);  */

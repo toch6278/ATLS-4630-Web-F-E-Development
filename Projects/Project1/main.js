@@ -33,6 +33,7 @@ playButton.addEventListener('click', (event) => {
   document.location.href = "Levels/level1.html";
 });
 
+
 // function onClickFn()
 // {
 //   document.location.href = "level1.html";
