@@ -1,5 +1,8 @@
+//Resources: https://www.youtube.com/watch?v=DABkhfsBAWw
 //card mechanism
 const cards = document.querySelectorAll(".card"); 
+
+let evenCount = true; 
 
 let card1, card2; 
 
@@ -37,35 +40,55 @@ function flipCard(e)
         // console.log(card1Img); 
         // console.log(card2Img); 
         matchCards(card1Img, card2Img);
+        console.log(card1);
     }
     
 }
 
 function matchCards(img1, img2) 
 {
+    // evenCount = false;
+    // console.log(evenCount);
     console.log(img1); 
     console.log(img2); 
     if (img1 === img2)
     {
-        // card1.style.display = "none"; 
-        // card2.style.display = "none";
-        
+        // evenCount = true;
+        // console.log(evenCount);
+        img1 = null; 
+        img2 = null;
+        setTimeout(() =>{
+        document.getElementById("mochi").innerHTML = ""
+        }, 3000);
+
+        card1.style.display = "none"; 
+        card2.style.display = "none";
+
         card1.querySelector("#mochi").disabled = true; 
         card2.querySelector("#mochi").disabled = true;
+         
         return console.log("card matched"); 
     }
-    console.log("no match");
+    else
+    {
+        console.log("no match");
 
-    setTimeout(() => {
-        //adding shake to class to both card after 400ms        
-        card1.classList.add("shake");
-        card2.classList.add("shake");
-    }, 400);
-    setTimeout(() => {
-        //adding shake to class to both card after 400ms        
-        card1.classList.remove("shake", "flip");
-        card2.classList.remove("shake", "flip")
-        card1 = ""; 
-        card2 = "";
-    }, 1200);
+        setTimeout(() => {
+            //adding shake to class to both card after 400ms        
+            card1.classList.add("shake");
+            card2.classList.add("shake");
+        }, 400);
+
+        setTimeout(() => {
+            //adding shake to class to both card after 400ms        
+            card1.classList.remove("shake", "flip");
+            card2.classList.remove("shake", "flip")
+            card1 = ""; 
+            card2 = "";
+        }, 1200);
+
+        // evenCount = true; 
+        // console.log(evenCount);
+    }
+
 }

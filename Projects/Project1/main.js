@@ -30,7 +30,7 @@ playButton.onsubmit = () =>
 playButton.addEventListener('click', (event) => {
   console.log('button clicked');
   event.preventDefault();
-  document.location.href = "Levels/level1.html";
+  document.location.href = "./Levels/level1.html";
 });
 
 
