@@ -98,7 +98,7 @@ function matchCards(img1, img2)
                 //adding shake to class to both card after 400ms        
                 // event.preventDefault();
                 document.location.href = "../index.html";
-            }, 2000);
+            }, 4000);
         }
         return console.log("card matched"); 
     }
