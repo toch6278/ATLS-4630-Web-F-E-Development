@@ -1,10 +1,17 @@
 //Resources: https://www.youtube.com/watch?v=DABkhfsBAWw
 //card mechanism
+cardcount = 8;
 const cards = document.querySelectorAll(".card"); 
+var modal = document.getElementById("end-game");
 
 let evenCount = true; 
 
 let card1, card2; 
+
+
+var duration = 15 * 1000;
+var animationEnd = Date.now() + duration;
+var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
 cards.forEach(card => {
     // console.log(cards);
@@ -63,10 +70,36 @@ function matchCards(img1, img2)
 
         card1.style.display = "none"; 
         card2.style.display = "none";
+        cardcount = cardcount - 2;
+        console.log(cardcount);
 
         card1.querySelector("#mochi").disabled = true; 
         card2.querySelector("#mochi").disabled = true;
          
+        if(cardcount == 0)
+        {
+            openModal();
+            //play confetti when level complete
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+              
+                if (timeLeft <= 0) {
+                  return clearInterval(interval);
+                }
+              
+                var particleCount = 50 * (timeLeft / duration);
+                // since particles fall down, start a bit higher than random
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+              }, 250);
+
+            // return to home page
+            setTimeout(() => {
+                //adding shake to class to both card after 400ms        
+                // event.preventDefault();
+                document.location.href = "../index.html";
+            }, 2000);
+        }
         return console.log("card matched"); 
     }
     else
@@ -91,4 +124,13 @@ function matchCards(img1, img2)
         // console.log(evenCount);
     }
 
+}
+
+function openModal()
+{
+    modal.style.display = "block";
+}
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
 }
