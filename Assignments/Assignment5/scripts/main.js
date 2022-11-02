@@ -1,4 +1,4 @@
-// import * as 'rita.js';
+import * as  RiTa from 'rita.js';
 
 console.log('hello');
 
