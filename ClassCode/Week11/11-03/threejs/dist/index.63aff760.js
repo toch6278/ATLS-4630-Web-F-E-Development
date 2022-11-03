@@ -535,6 +535,12 @@ function hmrAcceptRun(bundle, id) {
 var _three = require("three");
 //make sure that the THREE object exists
 console.log(_three);
+//how to create a THREE scene
+const scene = new _three.Scene();
+//creating a THREE camera (can only use fully complete cameras - ortho or linear)
+const camera = new _three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+//be able to render a picture 
+const renderer = new _three.WebGL1Renderer();
 
 },{"three":"ktPTu"}],"ktPTu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
