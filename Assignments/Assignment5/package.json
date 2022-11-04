@@ -4,13 +4,14 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx parcel index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "esbuild": "^0.15.12",
     "p5": "^1.5.0",
-    "parcel": "^2.7.0"
+    "parcel": "^2.7.0",
+    "three": "^0.146.0"
   }
 }
