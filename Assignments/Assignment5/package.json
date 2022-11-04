@@ -1,7 +1,6 @@
 {
   "name": "assignment5",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
     "dev": "npx parcel index.html"
@@ -9,9 +8,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esbuild": "^0.15.12",
     "p5": "^1.5.0",
     "parcel": "^2.7.0",
     "three": "^0.146.0"
-  }
+  },
+  "description": ""
 }

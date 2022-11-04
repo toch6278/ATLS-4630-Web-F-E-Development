@@ -1,0 +1,33 @@
+body
+{
+    margin: 0; 
+	padding: 0; 
+	overflow: hidden;
+	/* background: #fdab9f;  */
+	/* background: linear-gradient(135deg, #8fc7f1,#7173f5); */
+}
+#word {
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display:block;
+	color: white; 
+	font-weight: 800;
+	margin: 8rem 0;
+	font-family: 'Poppins';
+	font-size: 4rem;
+	color:antiquewhite;
+}
+div .circle
+{
+	position: absolute; 
+	transform: translate(-50%, -50%); 
+	height: 35px; 
+	width:3e5px;
+	/* background-color: #bbb;  */
+	border-radius: 50%;
+	border: 2px solid black;
+	/* box-shadow: 0 0 20px rgba(16,0,54,0.2); */
+}

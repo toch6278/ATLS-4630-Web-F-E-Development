@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#word {
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  color: #fff;
+  color: #faebd7;
+  margin: 8rem 0;
+  font-family: Poppins;
+  font-size: 4rem;
+  font-weight: 800;
+  display: block;
+  position: absolute;
+  top: 10px;
+}
+
+div .circle {
+  height: 35px;
+  width: 300000px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
