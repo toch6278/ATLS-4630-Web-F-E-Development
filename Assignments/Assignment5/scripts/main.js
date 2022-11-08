@@ -9,6 +9,15 @@ document.addEventListener('mousemove', onMouseMove);
 import * as THREE from 'three';
 // import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/GLTFLoader.js'
 
+import { TTFLoader } from 'three/examples/jsm/loaders/TTFLoader';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import Stats from 'three/examples/jsm/libs/stats.module';
+
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 //make sure that the THREE object exists
 console.log(THREE);
 
@@ -133,10 +142,78 @@ const geometry = new THREE.BufferGeometry().setFromPoints(points);
 const line = new THREE.Line(geometry, thread); 
 scene.add(line); 
 
+//Add orbit controls 
+const controls = new OrbitControls(camera, renderer.domElement);
+
+//Add FPS stats 
+const stats = Stats(); 
+document.body.appendChild(stats.dom);
+
+//Load model 
+const award = new GLTFLoader(); 
+const model = './models/CBF Award .gltf'; 
+award.load(model, (gltfScene) => {
+  console.log(model);
+  // scene.add(gltfScene.scene);
+});
+
+//Add text
+const loader = new FontLoader();
+loader.load(
+	// resource URL
+	'node_modules/three/examples/fonts/droid/droid_serif_regular.typeface.json',
+
+	// onLoad callback
+	(droidFont) => {
+		// do something with the font
+    console.log( droidFont );
+    const textGeometry = new TextGeometry('Hello', {
+      height: 2,
+      size: 10,
+      font: droidFont,
+    });
+    const textMaterial = new THREE.MeshNormalMaterial(); 
+    const textMesh = new THREE.Mesh(textGeometry, textMaterial); 
+    textMesh.position.x = -36; 
+    textMesh.position.y = 5; 
+    scene.add(textMesh);
+	},
+
+	// onProgress callback
+	function ( xhr ) {
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+	},
+
+	// onError callback
+	function ( err ) {
+		console.log( 'An error happened' );
+	}
+);
+
+const ttfLoader = new TTFLoader();
+    ttfLoader.load('fonts/jet_brains_mono_regular.ttf', (json) => {
+      // First parse the font.
+      const jetBrainsFont = fontLoader.parse(json);
+      // Use parsed font as normal.
+      const textGeometry = new TextGeometry('hello world', {
+        height: 2,
+        size: 10,
+        font: jetBrainsFont,
+      });
+      const textMaterial = new THREE.MeshNormalMaterial();
+      const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+      textMesh.position.x = -46;
+      textMesh.position.y = -10;
+      scene.add(textMesh);
+    });
+
+
 //create a render loop, called every 60th of a second
 function loop()
 {
   // camControls.update();
+  stats.update();
+  controls.update();
     //modify the scene 
     cube.rotateY(0.01); 
     tetra.rotateX(-0.01); 
