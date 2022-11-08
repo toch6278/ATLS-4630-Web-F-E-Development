@@ -721,7 +721,7 @@ function loop() {
 }
 requestAnimationFrame(loop);
 
-},{"three":"ktPTu","three/examples/jsm/loaders/TTFLoader":"hxGeK","three/examples/jsm/geometries/TextGeometry":"d5vi9","three/examples/jsm/loaders/FontLoader":"h0CPK","three/examples/jsm/controls/OrbitControls":"7mqRv","three/examples/jsm/libs/stats.module":"6xUSB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","three/examples/jsm/loaders/GLTFLoader.js":"dVRsF"}],"ktPTu":[function(require,module,exports) {
+},{"three":"ktPTu","three/examples/jsm/loaders/TTFLoader":"hxGeK","three/examples/jsm/loaders/FontLoader":"h0CPK","three/examples/jsm/geometries/TextGeometry":"d5vi9","three/examples/jsm/controls/OrbitControls":"7mqRv","three/examples/jsm/libs/stats.module":"6xUSB","three/examples/jsm/loaders/GLTFLoader.js":"dVRsF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ktPTu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ACESFilmicToneMapping", ()=>ACESFilmicToneMapping);
@@ -46493,45 +46493,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 },{}],"jhUEF":[function(require,module,exports) {
 "use strict";
 
-},{}],"d5vi9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "TextGeometry", ()=>TextGeometry);
-/**
- * Text = 3D Text
- *
- * parameters = {
- *  font: <THREE.Font>, // font
- *
- *  size: <float>, // size of the text
- *  height: <float>, // thickness to extrude text
- *  curveSegments: <int>, // number of points on the curves
- *
- *  bevelEnabled: <bool>, // turn on bevel
- *  bevelThickness: <float>, // how deep into text bevel goes
- *  bevelSize: <float>, // how far from text outline (including bevelOffset) is bevel
- *  bevelOffset: <float> // how far from text outline does bevel start
- * }
- */ var _three = require("three");
-class TextGeometry extends (0, _three.ExtrudeGeometry) {
-    constructor(text, parameters = {}){
-        const font = parameters.font;
-        if (font === undefined) super(); // generate default extrude geometry
-        else {
-            const shapes = font.generateShapes(text, parameters.size);
-            // translate parameters to ExtrudeGeometry API
-            parameters.depth = parameters.height !== undefined ? parameters.height : 50;
-            // defaults
-            if (parameters.bevelThickness === undefined) parameters.bevelThickness = 10;
-            if (parameters.bevelSize === undefined) parameters.bevelSize = 8;
-            if (parameters.bevelEnabled === undefined) parameters.bevelEnabled = false;
-            super(shapes, parameters);
-        }
-        this.type = "TextGeometry";
-    }
-}
-
-},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"h0CPK":[function(require,module,exports) {
+},{}],"h0CPK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FontLoader", ()=>FontLoader);
@@ -46635,6 +46597,44 @@ function createPath(char, scale, offsetX, offsetY, data) {
         offsetX: glyph.ha * scale,
         path: path
     };
+}
+
+},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5vi9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "TextGeometry", ()=>TextGeometry);
+/**
+ * Text = 3D Text
+ *
+ * parameters = {
+ *  font: <THREE.Font>, // font
+ *
+ *  size: <float>, // size of the text
+ *  height: <float>, // thickness to extrude text
+ *  curveSegments: <int>, // number of points on the curves
+ *
+ *  bevelEnabled: <bool>, // turn on bevel
+ *  bevelThickness: <float>, // how deep into text bevel goes
+ *  bevelSize: <float>, // how far from text outline (including bevelOffset) is bevel
+ *  bevelOffset: <float> // how far from text outline does bevel start
+ * }
+ */ var _three = require("three");
+class TextGeometry extends (0, _three.ExtrudeGeometry) {
+    constructor(text, parameters = {}){
+        const font = parameters.font;
+        if (font === undefined) super(); // generate default extrude geometry
+        else {
+            const shapes = font.generateShapes(text, parameters.size);
+            // translate parameters to ExtrudeGeometry API
+            parameters.depth = parameters.height !== undefined ? parameters.height : 50;
+            // defaults
+            if (parameters.bevelThickness === undefined) parameters.bevelThickness = 10;
+            if (parameters.bevelSize === undefined) parameters.bevelSize = 8;
+            if (parameters.bevelEnabled === undefined) parameters.bevelEnabled = false;
+            super(shapes, parameters);
+        }
+        this.type = "TextGeometry";
+    }
 }
 
 },{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7mqRv":[function(require,module,exports) {
