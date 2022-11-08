@@ -12,9 +12,5 @@
     "p5": "^1.5.0",
     "parcel": "^2.7.0",
     "three": "^0.146.0"
-  },
-  "description": "",
-  "devDependencies": {
-    "buffer": "^6.0.3"
   }
 }
