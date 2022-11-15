@@ -4,3 +4,4 @@
 **/.parcel-cache/
 **/dist/
 Assignments/Assignment5/.parcel-cache/data.mdb
+*.mdb
